@@ -10,14 +10,14 @@
     <header>
         <nav>
             <a href="index.html">
-                <img src="#" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
+                <img src="img/small-logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
             </a>
             <ul>
-                <li><a href="#"></a>Информация</li>
-                <li><a href="#"></a>Новости</li>
-                <li><a href="price.html"></a>Прайс-Лист</li>
-                <li><a href="#"></a>Магазин</li>
-                <li><a href="#"></a>Контакты</li>
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Новости</a></li>
+                <li><a href="price.html">Прайс-Лист</a></li>
+                <li><a href="shop.html">Магазин</a></li>
+                <li><a href="#">Контакты</a></li>
             </ul>
             <ul>
                 <button type="button">Вход</button>
@@ -96,7 +96,28 @@
 
     <section class="modal modal-login">
         <h2>Личный кабинет</h2>
-        <p>Введите свой логин и пароль</p>
+        <p>Введите пожалуйста свой логин и пароль</p>
+
+        <form action="#" method="POST">
+            <p>
+                <label for="user-login">Логин</label>
+                <input type="email" id="user-login" name="login" placeholder="email@example.com" autocomplete="on">
+            </p>
+
+            <p>
+                <label for="user-password">Пароль</label>
+                <input type="password" id="user-password" name="password" placeholder="••••••••••••••"
+                    autocomplete="on">
+            </p>
+
+            <p>
+                <input type="checkbox" name="remember" id="login-password-info" checked>
+                <label for="login-password-info">Запомните меня</label>
+
+                <a href="#">Я забыл пароль!</a>
+            </p>
+            <button type="submit">Войти</button>
+        </form>
         <button type="button">Закрыть</button>
     </section>
 </body>
