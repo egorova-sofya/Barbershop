@@ -1,0 +1,1220 @@
+@font-face {
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.eot');
+    src: local(''),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.woff2') format('woff2'),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.woff') format('woff'),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.ttf') format('truetype'),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-regular.svg#PTSansNarrow') format('svg');
+}
+
+@font-face {
+    font-family: 'PT Sans Narrow';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/pt-sans-narrow-v12-latin_cyrillic-700.eot');
+    src: local(''),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-700.woff2') format('woff2'),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-700.woff') format('woff'),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-700.ttf') format('truetype'),
+        url('../fonts/pt-sans-narrow-v12-latin_cyrillic-700.svg#PTSansNarrow') format('svg');
+}
+
+body {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "PT Sans Narrow", Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+
+    background-color: black;
+    background: url(img/background.jpg) no-repeat top center;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+
+/* обертки */
+
+.white-wrapper {
+    background-color: #f7f4f1;
+    background: url(img/background-lite.jpg) repeat 0 0;
+}
+
+.index-white-wrapper {
+    background-color: #f7f4f1;
+    background-image: url(img/separator.png),
+        url(img/background-lite.jpg);
+    background-position: 50% 50%,
+        0 0;
+    background-repeat: no-repeat,
+        repeat;
+
+    display: flex;
+    box-sizing: border-box;
+    padding: 45px 80px 50px 80px;
+    width: 940px;
+    height: 419px;
+    margin: auto;
+    margin-bottom: 36px;
+}
+
+.main-wrapper {
+    box-sizing: border-box;
+    width: 940px;
+}
+
+
+.main-center-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.shop-wrapper {
+    display: flex;
+}
+
+.catalog-wrapper {
+    box-sizing: border-box;
+    background-color: white;
+
+    display: inline-block;
+    box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.item-wrapper {
+    display: flex
+}
+
+.main-header {
+    font-size: 30px;
+    line-height: 42px;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 20px;
+}
+
+
+/* кнопка */
+
+.button {
+    box-sizing: border-box;
+
+    width: 140px;
+    height: 44px;
+
+    text-align: center;
+
+    font: inherit;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 0;
+
+    background-color: black;
+    border: none;
+}
+
+
+.button:hover,
+.button:focus,
+.button:active {
+    background-color: #663d15;
+}
+
+
+
+/* кнопка-цена */
+
+.button-price {
+    box-sizing: border-box;
+    padding: 22px 0;
+
+    width: 100%;
+    height: 44px;
+
+    font-size: 14px;
+    text-transform: uppercase;
+    color: black;
+    text-decoration: none;
+    line-height: 0;
+    text-align: center;
+
+    background-color: #e5e5e5;
+    border: none;
+}
+
+/* кнопка-ссылка */
+
+.button-link {
+    text-decoration: none;
+    color: white;
+    padding: 22px 0;
+
+}
+
+
+
+/* Навигация */
+
+.navigation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+
+    width: 100%;
+    height: 72px;
+
+
+    background-color: black;
+}
+
+.navigation-center-wrapper {
+    display: flex;
+    align-items: center;
+    width: 900px;
+
+}
+
+.navigation-items {
+    display: flex;
+}
+
+.navigation-items li {
+
+    margin-right: 40px;
+
+}
+
+.navigation-item li:last-child {
+    margin-right: 0px;
+}
+
+.navigation-enter-list {
+
+    margin-left: auto;
+
+}
+
+.navigation-items,
+.navigation-enter-list {
+    list-style: none;
+
+}
+
+.navigation-item,
+.navigation-enter {
+    font-size: 16px;
+    line-height: 20px;
+    color: white;
+}
+
+.navigation-item:hover,
+.navigation-enter:hover,
+.navigation-item:focus,
+.navigation-enter:focus {
+    background-color: #242424;
+}
+
+.navigation-current {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.navigation-current::after {
+    position: absolute;
+    content: "";
+    background-color: white;
+    width: 100%;
+    height: 4px;
+
+    left: 0px;
+    bottom: -26px;
+}
+
+.navigation-enter::before {
+    content: url(img/login.svg);
+    opacity: 0.3;
+    margin-right: 15px;
+    position: relative;
+    top: 2.5px;
+    /* я очень очень не уверенна насчет позишена сверху */
+
+}
+
+.navigation-enter:hover::before,
+.navigation-enter:focus::before {
+    opacity: 1;
+}
+
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navigation-logo {
+    align-self: center;
+    order: 1;
+    margin-bottom: 80px;
+
+}
+
+
+/* хлебные крошки */
+
+.breadcrumbs {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    margin-bottom: 55px;
+}
+
+
+.breadcrumbs a {
+    text-decoration: none;
+    font-size: 14px;
+    color: black;
+}
+
+.breadcrumbs a::after {
+    margin: 0 14px 0 14px;
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+.breadcrumbs-current {
+    color: #aba9a7;
+}
+
+/* пагинация */
+.pagination-list {
+    display: flex;
+
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 45px;
+
+}
+
+.pagination-item {
+    width: 43px;
+    height: 43px;
+    background-color: black;
+    display: inline-block;
+    padding-top: 1px;
+    text-align: center;
+    line-height: 0;
+    margin-right: 7px;
+}
+
+.pagination-item a {
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+    display: inline-block;
+    margin: 50% 0;
+    line-height: 0;
+}
+
+.pagination-item-current {
+    background-color: white;
+}
+
+.pagination-item-current a {
+    color: black;
+}
+
+.pagination-item:not(.pagination-item-current):hover {
+    background-color: #663d15;
+}
+
+
+/* Блок преимуществ */
+
+.advantages-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+
+.advantages-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 270px;
+    height: 170px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+.advantages-item:last-child {
+    margin-left: 0;
+}
+
+.advantages-title {
+    font-size: 30px;
+    margin: 0;
+
+}
+
+.advantages-text {
+    font-size: 14px;
+    line-height: 24px;
+    align-self: flex-end;
+}
+
+.square {
+    width: 15px;
+    height: 15px;
+    background-color: #f7f4f1;
+    transform: rotate(45deg);
+}
+
+
+/* Новости */
+
+.news {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 100px;
+
+    width: 470px;
+
+    color: black;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.news-item {
+    margin-bottom: 30px;
+}
+
+.news-title {
+    font-size: 30px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 33px;
+}
+
+.news-text {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.news-data {
+    text-transform: none;
+    font-size: 14px;
+
+}
+
+
+
+/* галерея */
+
+.photo-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 300px;
+
+}
+
+.photo-gallery-title {
+    font-size: 30px;
+    line-height: 42px;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+
+.gallery-content {
+    display: inline-block;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 38px;
+
+    font-size: 0;
+
+    background-color: #cccccc;
+    border: solid 7px #ffffff;
+}
+
+
+.buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+
+}
+
+/* контакты */
+.contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 100px;
+
+    width: 470px;
+}
+
+.contacts-title {
+    font-size: 30px;
+    line-height: 42px;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 29px;
+}
+
+
+.contacts-adress,
+.contacts-time {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+.contacts-adress {
+    margin-bottom: 32px;
+}
+
+.contacts-time {
+    margin-bottom: 28px;
+}
+
+/* запись */
+
+.registration {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 300px;
+}
+
+
+.registration-title {
+    font-size: 30px;
+    line-height: 42px;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+
+.registration-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 10px;
+}
+
+.registration-form {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+
+}
+
+.registration-form p {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px 20px 10px 0px;
+
+}
+
+.registration-form p:nth-child(2n) {
+    margin: 0px;
+}
+
+.registration-form p:nth-last-child(1),
+.registration-form p:nth-last-child(2) {
+    margin-bottom: 20px;
+}
+
+.registration-form label {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+    padding: 0px;
+    margin: 0px 0px 7px 17px;
+}
+
+.registration-form input {
+    box-sizing: border-box;
+    width: 140px;
+    height: 43px;
+
+    padding-left: 17px;
+    margin: 0px;
+
+    font: inherit;
+
+
+    background-color: transparent;
+    border: solid 2px #000000;
+
+}
+
+.registration-form input:focus {
+    border-color: #663d15;
+}
+
+.registration-form input::placeholder {
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.registration-form .button {
+    align-self: stretch;
+    margin: 0px;
+    flex-basis: 300px;
+}
+
+
+/* фильтры */
+
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+    width: 170px;
+}
+
+.filters fieldset {
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.filters legend {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 30px;
+}
+
+.filters-list {
+    list-style: none;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+.filter-option {
+    margin-bottom: 25px;
+}
+
+.filter-option:last-child {
+    margin-bottom: 50px;
+}
+
+.filter-option:hover,
+.filter-option:focus {
+    color: #663d15;
+}
+
+.filter-checkbox-off::before {
+    margin-right: 23px;
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: solid 2px #000101;
+    background-color: #f9f6f3;
+}
+
+.filter-checkbox-on::before {
+    background: url(img/small-cross.svg) no-repeat 50% 50%;
+}
+
+.filter-radio-off::before {
+    margin-right: 22px;
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: solid 2px #000101;
+    background-color: #f9f6f3;
+}
+
+/* .filter-radio-on:checked::before {
+    margin-right: 22px;
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 5px;
+    height: 5px;
+    background-color: #000101;
+} */
+
+/* каталог */
+
+
+
+
+.catalog-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 720px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 45px;
+}
+
+.catalog-item {
+    width: 220px;
+    box-sizing: border-box;
+
+
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.catalog-item:last-child {
+    margin-right: 0px;
+}
+
+.catalog-img {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.catalog-item h3,
+.catalog-item-price {
+    padding-left: 16px;
+}
+
+.catalog-item-price {
+    display: flex;
+    width: 187px;
+}
+
+
+.catalog-link {
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+}
+
+.catalog-category {
+    text-transform: none;
+}
+
+
+
+/* страница товара */
+.product-photos {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    margin-right: 90px;
+}
+
+.product-photo-preview {
+    display: flex;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.product-photo-preview li,
+.product-photo-full img {
+    box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
+}
+
+.product-photo-preview li {
+    margin: 0px;
+    padding: 0px;
+    margin-right: 20px;
+}
+
+.product-photo-preview li:last-child {
+    margin-right: 0px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    width: 379px;
+}
+
+.product-text,
+.product-availability,
+.product-article {
+    margin: 0px;
+    padding: 0px;
+}
+
+.product-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 379px;
+    margin-bottom: 40px;
+}
+
+.product-availability {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+}
+
+.product-article {
+    font-size: 14px;
+    line-height: 24px;
+    color: #aeaeae;
+}
+
+.product-text {
+    color: black;
+    margin-bottom: 40px;
+}
+
+.product-price {
+    display: flex;
+    width: 187px;
+    margin-bottom: 67px;
+}
+
+.product-info h3 {
+    font-size: 24px;
+    line-height: 30px;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 38px;
+}
+
+.product-info ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.product-info li {
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+}
+
+.product-info li::before {
+    margin-right: 8px;
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+
+/* прайс-лист */
+
+
+
+.big-title {
+    font-size: 48px;
+    line-height: 48px;
+    color: #000000;
+    display: inline-block;
+    margin-bottom: 73px;
+}
+
+.big-title::before {
+    content: "";
+    display: inline-block;
+    width: 160px;
+    height: 2px;
+    background-image: url(img/title-stik.png);
+    margin-right: 26px;
+    vertical-align: middle;
+}
+
+.big-title::after {
+    content: "";
+    display: inline-block;
+    width: 160px;
+    height: 2px;
+    background-image: url(img/title-stik.png);
+    margin-left: 26px;
+    vertical-align: middle;
+}
+
+.price-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.brends {
+    margin-right: 240px;
+    margin-bottom: 70px;
+}
+
+.brends p {
+    font-size: 24px;
+    line-height: 30px;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 37px;
+}
+
+.brends-list {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.brends-item {
+    font-size: 14px;
+    margin-bottom: 25px;
+    color: black;
+}
+
+.brends-item:last-child {
+    margin-bottom: 0px;
+}
+
+.brends-item::before {
+    margin-right: 9px;
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    transform: rotate(45deg);
+}
+
+
+.price h2 {
+    font-size: 24px;
+    line-height: 30px;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 39px;
+}
+
+.table-price {
+    box-sizing: border-box;
+    width: 462px;
+    height: 129px;
+    border: solid 2px #000101;
+    border-collapse: collapse;
+
+    font-size: 14px;
+    line-height: 24px;
+    color: black;
+
+}
+
+.table-price td {
+    border: solid 2px #000101;
+}
+
+.table-price td:nth-child(2n) {
+    text-align: center;
+}
+
+.table-price td:nth-child(2n + 1) {
+    padding-left: 19px;
+}
+
+.about-us {
+    margin-bottom: 82px;
+}
+
+.about-us h2 {
+    font-size: 24px;
+    line-height: 30px;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 40px;
+}
+
+.about-us-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+}
+
+.about-us p {
+    font-size: 14px;
+    line-height: 24px;
+    color: #000000;
+    width: 379px;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+/* подвал */
+
+.main-footer {
+    display: flex;
+    justify-content: center;
+    color: white;
+
+    background-color: black;
+    background: url(img/background-dark.jpg) repeat 0 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 940px;
+}
+
+.footer_contacts {
+    line-height: 24px;
+}
+
+.footer-link {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    text-decoration: none;
+}
+
+.footer-socials {
+    text-align: center;
+}
+
+.footer-socials p {
+    margin-bottom: 20px;
+}
+
+.socials-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 141px;
+}
+
+.socials-item {
+    text-decoration: none;
+    color: white;
+    width: 43px;
+    height: 43px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.social-vk {
+    background: black url(img/vk.svg) no-repeat 50% 50%;
+}
+
+.social-fb {
+    background: black url(img/facebook.svg) no-repeat 50% 50%;
+}
+
+.social-inst {
+    background: black url(img/instagram.svg) no-repeat 50% 50%;
+}
+
+
+.footer-copyright {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright-info {
+    margin-bottom: 20px;
+}
+
+.footer-copyright .button:hover,
+.footer-copyright .button:focus {
+    color: black;
+    background-color: white;
+}
+
+/* модальные окна */
+
+.modal {
+    color: black;
+
+    background-color: #f8f3f0;
+    background: url(img/background-lite.jpg) repeat 0 0;
+}
+
+.modal-login {
+    display: flex;
+    flex-direction: column;
+    width: 460px;
+    padding: 50px 80px;
+    box-shadow: 0px 30px 50px 0 black;
+}
+
+.modal-login p {
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 16px;
+}
+
+.modal-login-title {
+    font-size: 30px;
+    line-height: 42px;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 15px;
+}
+
+
+.modal a {
+    font-size: 14px;
+    color: black;
+}
+
+
+.modal-login-form input {
+    box-sizing: border-box;
+    width: 300px;
+    height: 43px;
+
+    padding-left: 17px;
+
+    font: inherit;
+    color: black;
+    text-transform: uppercase;
+
+    background-color: #f9f6f3;
+    border: solid 2px #000000;
+
+}
+
+.modal-login-form input:focus {
+    border-color: #663d15;
+}
+
+.login-checkbox {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 300px;
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 20px;
+}
+
+.login-checkbox:hover,
+.login-checkbox:focus {
+    color: #663d15;
+}
+
+.login-checkbox label {
+    padding: 0px;
+    margin: 0px;
+}
+
+.check-me-off::before {
+    box-sizing: border-box;
+    align-self: center;
+    margin-right: 10px;
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: solid 2px #000101;
+    background-color: #f9f6f3;
+}
+
+.check-me-on::before {
+    background: url(img/small-cross.svg) no-repeat 50% 50%;
+}
+
+.forgot-password {
+    color: black;
+    text-decoration: underline;
+
+}
+
+.forgot-password:hover,
+.forgot-password:focus {
+    text-decoration: none;
+}
+
+.modal-login-form .button {
+    width: 300px;
+}
+
+.modal-close {
+    background: url(img/big-cross.svg) no-repeat 50% 50%;
+}
+
+.modal-map {
+    width: 780px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0px 30px 50px 0 black;
+}
+
+.modal-map p {
+    margin: 0px;
+    padding: 0px;
+}
